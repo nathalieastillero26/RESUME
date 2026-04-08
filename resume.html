@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume - Nathalie Astillero</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      background-color: #e0f2f1; /* Light teal background */
+      color: #333;
+    }
+
+    .profile-section {
+      display: flex;
+      gap: 30px;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-image {
+      flex: 0 0 200px;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 3px solid #4db6ac; /* Teal border */
+    }
+
+    .profile-info {
+      flex: 1;
+      padding: 10px;
+    }
+
+    .profile-info h2 {
+      margin-top: 0;
+      color: #004d40; /* Deep teal for name */
+      font-size: 2em;
+    }
+
+    .info-item {
+      margin: 15px 0;
+      font-size: 1.1em;
+    }
+
+    .info-label {
+      font-weight: bold;
+      color: #00695c;
+      display: inline-block;
+      width: 100px;
+    }
+
+    .description {
+      margin-top: 20px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      background: #004d40; /* Dark teal navbar */
+      z-index: 100;
+      margin-top: 30px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .nav-menu {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-menu li {
+      margin: 0;
+    }
+
+    .nav-menu a {
+      display: block;
+      padding: 15px 25px;
+      text-decoration: none;
+      color: #e0f2f1; /* Light teal text */
+      font-weight: 500;
+      transition: all 0.3s ease;
+      border-bottom: 3px solid transparent;
+    }
+
+    .nav-menu a:hover {
+      background: #00695c;
+      border-bottom-color: #80cbc4;
+    }
+
+    .nav-menu a.active {
+      color: #ffffff;
+      border-bottom-color: #80cbc4;
+    }
+
+    .content-section {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: 30px auto;
+      background: #ffffff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    }
+
+    .content-section h2 {
+      color: #004d40;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #4db6ac;
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+
+    .resume-item {
+      margin-bottom: 30px;
+      padding: 20px;
+      background: #f1f8f6;
+      border-radius: 8px;
+      border-left: 4px solid #26a69a; /* Teal accent */
+    }
+
+    .resume-item h3 {
+      margin: 0 0 10px 0;
+      color: #00695c;
+    }
+
+    .resume-item p,
+    .resume-item li {
+      margin: 5px 0;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .resume-item li {
+      margin-left: 20px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-category {
+      background: #f1f8f6;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 4px solid #26a69a;
+    }
+
+    .skill-category h4 {
+      margin: 0 0 15px 0;
+      color: #004d40;
+    }
+
+    .skill-category li {
+      padding: 5px 0;
+      color: #444;
+      margin-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .profile-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-image {
+        flex: none;
+        align-self: center;
+      }
+
+      .nav-menu {
+        flex-wrap: wrap;
+      }
+
+      .nav-menu a {
+        padding: 12px 15px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <section class="profile-section">
+    <div class="profile-image">
+      <img src="nat.jpg" alt="Nathalie Astillero" />
+    </div>
+
+    <div class="profile-info">
+      <h2>Nathalie M. Astillero</h2>
+
+      <div class="info-item">
+        <span class="info-label">Age:</span>
+        <span>26</span>
+      </div>
+
+      <div class="info-item">
+        <span class="info-label">Address:</span>
+        <span>Bulan Sorsogon, Philippines</span>
+      </div>
+
+      <div class="info-item">
+        <span class="info-label">Course:</span>
+        <span>Bachelor of Science in Information System</span>
+      </div>
+
+      <div class="description">
+        <strong>Description:</strong><br />
+        A highly motivated Information Systems student with a creative thinker and a dedicated learner, always seeking new challenges and opportunities to grow in the field of technology.
+      </div>
+    </div>
+  </section>
+
+  <nav class="sticky-nav">
+    <div class="nav-container">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="resume.html" class="active">Resume</a></li>
+        <li><a href="certificates.html">Certificates</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="content-section">
+    <h2>Education</h2>
+    <div class="resume-item">
+      <h3>Sorsogon State University</h3>
+      <p>Bulan Campus | Bulan Sorsogon</p>
+      <p><strong>Bachelor of Science in Information System</strong> | 2023 - Present</p>
+      <h3>Brigham Young University - Idaho</h3>
+      <p>Online Certificates & Degrees Idaho, United States</p>
+      <p><strong>Commercial Fundamentals</strong> | 2021-2022</p>
+      <h3>Solis Institute of Technology</h3>
+      <p>Managa-naga, Bulan, Sorsogon</p>
+      <p><strong>Senior High School (ABM Strand)</strong> | 2016-2018</p>
+      <p><strong>Junior High School</strong> | 2012-2016</p>
+      <h3>Obrero Elementary School</h3>
+      <p>Obrero, Bulan, Sorsogon</p>
+      <p><strong>Elementary Graduate</strong> | 2006-2012</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-category">
+        <h4>Microsoft Office</h4>
+        <li>Proficient in Microsoft Office applications, including Word, Excel, and PowerPoint.</li>
+        <h4>Attention To Detail</h4>
+        <li>Ability to ensure accuracy and quality in all tasks and projects.</li>
+        <h4>Technical Writing Expertise</h4>
+        <li>Demonstrates proficiency in creating clear, accurate, and user-friendly documentation for technical subjects.</li>
+        <h4>Collaboration & Communication</h4>
+        <li>Effectively interacts with subject matter experts and stakeholders to ensure documentation accuracy.</li>
+        <h4>Tools & Technologies</h4>
+        <li>Proficient in various software and platforms for creating and managing documentation.</li>
+        <h4>Research & Analysis</h4>
+        <li>Conducts thorough research and translates complex technical topics into accessible content.</li>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Experience</h2>
+    <div class="resume-item">
+      <h3>ASD Caregiver</h3>
+      <p><strong>Collaborator & Emotional Anchor</strong> | 2022 - 2023</p>
+      <li>Worked with parents, teachers, and therapists to reinforce strategies consistently.</li>
+      <li>Encouraged communication and interaction using visual supports, routines, and structured play.</li>
+
+      <h3>Customer Service Associate</h3>
+      <p><strong>Sutherland Global Services - Legazpi</strong> | 2021 - 2022</p>
+      <li>Assisted customers with order entry, ensuring timely and accurate processing.</li>
+      <li>Maintained detailed records of customer information and transactions.</li>
+
+      <h3>Full-Time Missionary</h3>
+      <p><strong>The Church of Jesus Christ of Latter-day Saints</strong> | 2019 - 2021</p>
+      <li>Developed strong communication and interpersonal skills working with individuals and families daily.</li>
+      <li>Taught moral values and life principles through community outreach and instruction.</li>
+    </div>
+  </section>
+</body>
+</html>
